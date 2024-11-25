@@ -15,12 +15,9 @@ print(response.json())
 # Función para realizar una solicitud POST y crear un nuevo kit
 def post_new_client_kits(kit_body):
     create_user_response = post_new_user(data.user_body)
-
     auth_token = create_user_response.json().get('authToken')
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {auth_token}"
-    }
+    headers = data.headers.copy()
+    headers["Authorization"] = f"Bearer {auth_token}"
 
     return requests.post(configuration.URL_SERVICE + configuration.KITS_PATH,
                          json=kit_body,

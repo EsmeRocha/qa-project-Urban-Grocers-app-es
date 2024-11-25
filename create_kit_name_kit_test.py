@@ -79,7 +79,4 @@ def test_kit_no_name_get_error_response():
 
 # Prueba 9: Tipo de dato incorrecto en "name" (caso negativo)
 def test_kit_number_type_name_get_error_response():
-    kit_body = get_kit_body(data.kit_body_name_as_number)
-    response = sender_stand_request.post_new_client_kits(kit_body)
-
-    assert response.status_code == 400
+    negative_assert(data.kit_body_name_as_number)
