@@ -57,7 +57,7 @@ kit_body_name_over_max_length = {
 
 
 # 8. El parámetro no se pasa en la solicitud
-kit_body_name_missing = {
+kit_no_name_get_error_response = {
     # Sin parámetro 'name'
 }
 

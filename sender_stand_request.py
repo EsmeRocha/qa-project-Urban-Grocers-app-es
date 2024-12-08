@@ -20,4 +20,3 @@ def post_new_client_kits(kit_body):
                          json=kit_body,
                          headers=headers
                          )
-
